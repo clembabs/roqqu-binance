@@ -35,6 +35,11 @@ dependencies:
   flutter_hooks: ^0.18.6
   intl: ^0.17.0
   web_socket_channel: ^2.4.0
+  # candlesticks: ^2.1.0
+  candlesticks:
+    git:
+      url: https://github.com/r-mzy47/candlesticks
+  http: ^0.13.6
   easy_localization: ^3.0.2
 
 
