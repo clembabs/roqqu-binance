@@ -5,6 +5,10 @@ class SvgIcons {
 
   static const String bitcoin = '${svgPath}bitcoin.svg';
   static const String dollar = '${svgPath}dollar.svg';
+  static const String arrowDown = '${svgPath}arrow_down.svg';
+  static const String arrowUp = '${svgPath}arrow_up.svg';
+  static const String arrowLongDown = '${svgPath}arrow_long_down.svg';
+  static const String timer = '${svgPath}timer.svg';
 
   //DarkMode
   static const String logomark = '${svgPath}logomark.svg';

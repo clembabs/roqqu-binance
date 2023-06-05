@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:roqqu_binance/src/core/constants/app_theme.dart';
 import 'package:roqqu_binance/src/features/home/views/home_view.dart';
@@ -14,7 +15,7 @@ Future<void> main() async {
     ],
     fallbackLocale: const Locale('en'),
     path: 'assets/translations',
-    child: const MyApp(),
+    child: const ProviderScope(child: MyApp()),
   ));
 }
 
