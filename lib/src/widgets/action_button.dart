@@ -10,6 +10,7 @@ class ActionButton extends StatelessWidget {
   final double? height;
   final Color? color;
   final Color? textColor;
+  final Color? borderColor;
   final TextStyle? style;
   final Widget? widget;
 
@@ -28,6 +29,7 @@ class ActionButton extends StatelessWidget {
     this.isLoading = false,
     this.style,
     this.isDisabled = false,
+    this.borderColor,
   }) : super(key: key);
 
   const ActionButton.outline({
@@ -42,6 +44,7 @@ class ActionButton extends StatelessWidget {
     this.isLoading = false,
     this.style,
     this.isDisabled = false,
+    this.borderColor,
   }) : super(key: key);
 
   @override
@@ -52,9 +55,11 @@ class ActionButton extends StatelessWidget {
           height: height ?? 44.h,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: color ?? AppColors.successColor,
-            borderRadius: BorderRadius.circular(8),
-          ),
+              color: color ?? AppColors.successColor,
+              borderRadius: BorderRadius.circular(8),
+              border: borderColor != null
+                  ? Border.all(color: borderColor ?? AppColors.successColor)
+                  : null),
           child: widget ??
               Text(
                 text,

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:candlesticks/candlesticks.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:roqqu_binance/src/core/constants/api_routes.dart';
@@ -14,15 +15,16 @@ class CandlesRepositoryImpl {
     try {
       final uri = Uri.parse(
           "https://api.binance.com/api/v3/klines?symbol=$symbol&interval=$interval${endTime != null ? "&endTime=$endTime" : ""}");
-      print(uri);
+
       final res = await http.get(uri);
+
       return (jsonDecode(res.body) as List<dynamic>)
           .map((e) => Candle.fromJson(e))
           .toList()
           .reversed
           .toList();
     } on PlatformException catch (e) {
-      print(e.message);
+      debugPrint(e.message);
       return [];
     }
   }
@@ -37,7 +39,7 @@ class CandlesRepositoryImpl {
           .toList()
           .toList();
     } on PlatformException catch (e) {
-      print(e.message);
+      debugPrint(e.message);
       return [];
     }
   }

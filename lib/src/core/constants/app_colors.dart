@@ -13,10 +13,12 @@ class AppColors {
   static const Color angelWhitePrimary = Color(0xFFFFFFFF);
   static const Color blackTintTwoSecondary = Color(0xFF737A91);
   static const Color darkCardStroke = Color(0xFF262932);
+  static const Color darkInputStroke = Color(0xFF373B3F);
 
   static const Color successColor = Color(0xFF00C076);
 
   static const Color alertColor = Color(0xFFFF554A);
+  static const Color blueFountain = Color(0xFF2764FF);
 
   // static const Color lilac = Color(0xFFAAB2F7);
   // static const Color mediumLilac = Color(0xFF808BF3);

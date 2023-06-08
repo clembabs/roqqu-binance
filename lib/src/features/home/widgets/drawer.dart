@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:roqqu_binance/src/core/constants/app_colors.dart';
 import 'package:roqqu_binance/src/core/constants/app_text_styles.dart';
+import 'package:roqqu_binance/src/core/constants/app_theme.dart';
 
 void showCustomPopupMenu(BuildContext context) {
   final popupMenuItems = [
@@ -51,6 +53,9 @@ void showCustomPopupMenu(BuildContext context) {
   final offset = button.localToGlobal(Offset.zero);
 
   showMenu(
+    color: isLightMode(context)
+        ? AppColors.angelWhitePrimary
+        : AppColors.darkInputStroke,
     context: context,
     position: RelativeRect.fromLTRB(
       offset.dx + button.size.width,
@@ -70,5 +75,4 @@ void showCustomPopupMenu(BuildContext context) {
 
 void handlePopupMenuSelection(String value) {
   // Handle the selected option
-  print('Selected option: $value');
 }
