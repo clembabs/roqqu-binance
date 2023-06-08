@@ -4,7 +4,8 @@
 The purpose of this project is to develop the crypto App for Roqqu Test Interview using websockets. This project has been built using the Flutter framework, which allows to build an app for mobile, from a single codebase.
 
 - Riverpod and SetState was used as the statemanagement.
-- Candlesticks plugin was used for the candles [Candlesticks plugin](https://pub.dev/packages/candlesticks)
+- Candlesticks plugin was used for the candles [Check here](https://pub.dev/packages/candlesticks)
+- Binance WebSockets API for Candlestick and Orderbooks  [Visit here](https://www.binance.com/en-ZA/support/faq/binance-options-api-interface-and-websocket-fe0be251ac014a8082e702f83d089e54)
 
 - The GiF/Video is larger than github gif/video requirements
 - <b>Video Url --- </b> [<b>https://drive.google.com/file/d/1jNLZfTc_SGLcb1jBaHvbN6ceVcgXFBNi/view?usp=share_link</b>](https://drive.google.com/file/d/1jNLZfTc_SGLcb1jBaHvbN6ceVcgXFBNi/view?usp=share_link) 
